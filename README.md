@@ -20,8 +20,7 @@ This package integrates the powerful AIMNet2 neural network potential into your 
 While package is in alpha stage and repository is private, please install into your conda envoronment manually with
 ```
 # install requirements
-conda install -y pytorch pytorch-cuda=12.1 -c pytorch -c nvidia 
-conda install -y -c pyg pytorch-cluster
+conda install -y pytorch pytorch-cuda pytorch-cluster -c pytorch -c nvidia -c pyg 
 conda install -y -c conda-forge openbabel ase
 ## pysis requirements
 conda install -y -c conda-forge autograd dask distributed h5py fabric jinja2 joblib matplotlib numpy natsort psutil pyyaml rmsd scipy sympy scikit-learn
