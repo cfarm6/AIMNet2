@@ -12,7 +12,7 @@ model_registry_aliases['aimnet2-qr'] = 'aimnet2-qr/aimnet2-qr_b97md4_qzvp_2'
 def get_model_path(s: str):
     # direct file path
     if os.path.isfile(s):
-        print('Found model file:', s)
+        # print('Found model file:', s)
         return s
     # check aliases
     if s in model_registry_aliases:
@@ -23,8 +23,8 @@ def get_model_path(s: str):
     sdir = os.path.dirname(s)
     os.makedirs(os.path.join(os.path.dirname(__file__), 'assets', sdir), exist_ok=True)
     s_local = os.path.join(os.path.dirname(__file__), 'assets', s)
-    if os.path.isfile(s_local):
-        print('Found model file:', s_local)
+    if os.path.isfile(s_local): None
+        # print('Found model file:', s_local)
     else:
         url = f'https://github.com/zubatyuk/aimnet-model-zoo/raw/main/{s}'
         print('Downloading model file from', url)
